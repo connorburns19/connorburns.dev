@@ -1,36 +1,18 @@
 import { ExternalLink } from "lucide-react";
-import { GitHubIcon } from "../BrandIcons";
 
 const PROJECTS = [
   {
-    title: "Project Alpha",
+    title: "Paw Pirates",
     description:
-      "Placeholder description for a web application that solves a real problem. Built with modern technologies and shipped with care.",
-    demoUrl: "#",
-    repoUrl: "#",
-  },
-  {
-    title: "Project Beta",
-    description:
-      "Another placeholder project. This one focuses on performance and user experience, with an emphasis on accessibility.",
-    demoUrl: "#",
-    repoUrl: "#",
-  },
-  {
-    title: "Project Gamma",
-    description:
-      "A third placeholder project demonstrating full-stack capabilities from API design through to polished frontend delivery.",
-    demoUrl: "#",
-    repoUrl: "#",
+      "A two-versus-two party game built in Unity with C#. Awarded third place for accessibility at the 2024 Level Up student games showcase. Contributed game logic for player movement, item interaction, and scoring, and developed custom shaders using Unity Shader Graph.",
+    tech: "Unity · C#",
+    demoUrl: "https://store.steampowered.com/app/2927380/Paw_Pirates/",
   },
 ];
 
 export function Projects() {
   return (
-    <section
-      id="projects"
-      className="relative z-10"
-    >
+    <section id="projects" className="relative z-10">
       <div className="max-w-4xl mx-auto px-6 py-24">
         <h2 className="text-xs font-semibold tracking-widest uppercase text-zinc-500 mb-10">
           Projects
@@ -43,26 +25,22 @@ export function Projects() {
             >
               <div className="aspect-video bg-zinc-900" />
               <div className="p-5">
-                <h3 className="font-semibold text-zinc-100 mb-2">
+                <h3 className="font-semibold text-zinc-100 mb-1">
                   {project.title}
                 </h3>
+                <p className="text-xs text-zinc-600 mb-3">{project.tech}</p>
                 <p className="text-sm text-zinc-400 leading-relaxed mb-4">
                   {project.description}
                 </p>
                 <div className="flex items-center gap-4 text-xs text-zinc-500">
                   <a
                     href={project.demoUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="flex items-center gap-1.5 hover:text-zinc-300 transition-colors"
                   >
                     <ExternalLink size={11} />
-                    Live demo
-                  </a>
-                  <a
-                    href={project.repoUrl}
-                    className="flex items-center gap-1.5 hover:text-zinc-300 transition-colors"
-                  >
-                    <GitHubIcon size={11} />
-                    Source
+                    View on Steam
                   </a>
                 </div>
               </div>

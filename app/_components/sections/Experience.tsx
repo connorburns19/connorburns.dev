@@ -1,15 +1,17 @@
 const JOBS = [
   {
-    company: "Company A",
-    title: "Software Engineer",
-    period: "2023 – Present",
-    description: "Placeholder description of role and impact.",
+    company: "Rocscience Inc.",
+    title: "Full-Stack Web Developer",
+    period: "July 2024 – December 2025",
+    description:
+      "Built full-stack features for RSLog, a geotechnical borehole logging application on ASP.NET Core. Scoped and developed the RSLog API service used internally and by client teams, designed a query builder module for dynamic entity filtering, and built a JSON import/export service for cross-instance project sharing. Managed database migrations with Entity Framework Core and shipped via Azure DevOps.",
   },
   {
-    company: "Company B",
-    title: "Junior Developer",
-    period: "2021 – 2023",
-    description: "Placeholder description of role and impact.",
+    company: "Dayforce",
+    title: "Full-Stack Web Developer Intern",
+    period: "May 2022 – May 2023",
+    description:
+      "Worked full-stack on Dayforce's .NET HR platform in an Agile team. Developed TypeScript UI widgets using the Dojo Toolkit, wrote C# business logic for the recruiting module, optimized SQL queries in the data access layer, and implemented WCAG-compliant accessibility features.",
   },
 ];
 
