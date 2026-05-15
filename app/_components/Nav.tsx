@@ -34,6 +34,14 @@ export function Nav() {
           </li>
           <li>
             <a
+              href="#experience"
+              className="hover:text-zinc-100 transition-colors"
+            >
+              Experience
+            </a>
+          </li>
+          <li>
+            <a
               href="#projects"
               className="hover:text-zinc-100 transition-colors"
             >
