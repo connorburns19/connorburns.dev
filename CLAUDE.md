@@ -38,12 +38,12 @@ Everything else — typography-led layout, generous whitespace, motion only when
 Single page, top to bottom:
 
 1. **Hero** — name, one-line pitch, social links (GitHub, LinkedIn, email).
-2. **Projects** — 2–3 cards. Each: screenshot, name, one-paragraph writeup, live demo link, GitHub link.
-3. **About** — short bio paragraph (companies woven into the prose) + resume PDF download button.
+2. **About** — short bio paragraph (companies woven into the prose) + resume PDF download button.
+3. **Projects** — 2–3 cards. Each: screenshot, name, one-paragraph writeup, live demo link, GitHub link.
 4. **Available for Freelance** — short pitch ("Custom websites for small businesses…") + contact form (name, email, message).
 5. **Footer** — socials repeated, copyright.
 
-Sticky top nav with smooth-scroll anchor links: Projects · About · Freelance.
+Sticky top nav with smooth-scroll anchor links: About · Projects · Freelance.
 
 No multi-page routing yet. When individual projects deserve deep case-studies, add `/projects/[slug]` then — not before.
 
