@@ -63,10 +63,10 @@ export function Projects() {
                   {project.title}
                 </h3>
                 <p className="text-xs text-zinc-600 mb-3">{project.tech}</p>
-                <p className="text-sm text-zinc-400 leading-relaxed mb-4">
+                <p className="text-sm text-zinc-300 leading-relaxed mb-4">
                   {project.description}
                 </p>
-                <div className="flex items-center gap-4 text-xs text-zinc-500">
+                <div className="flex items-center gap-4 text-xs text-zinc-400">
                   {project.demoUrl && (
                     <a
                       href={project.demoUrl}

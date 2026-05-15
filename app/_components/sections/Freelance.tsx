@@ -47,16 +47,18 @@ export function Freelance() {
     >
       <div className="max-w-4xl mx-auto px-6 py-24">
         <h2 className="text-xs font-semibold tracking-widest uppercase text-zinc-500 mb-10">
-          Need me to build you a website/app for your business?
+          Freelance
         </h2>
         <div className="grid md:grid-cols-2 gap-12 items-start">
           <div>
-            <p className="text-zinc-300 leading-relaxed text-lg mb-4">
-              Custom websites for small businesses. <br/>
-              Fast, accessible, and built to last.
+            <h3 className="text-2xl sm:text-3xl font-semibold tracking-tight text-zinc-100 mb-4 leading-tight">
+              Need a website for your business?
+            </h3>
+            <p className="text-zinc-300 leading-relaxed mb-3">
+              Custom websites for small businesses. Fast, accessible, and built to last.
             </p>
-            <p className="text-zinc-500 text-sm leading-relaxed">
-              Enter your information here and I'll get back to you asap
+            <p className="text-zinc-400 text-sm leading-relaxed">
+              Send me a message and I&apos;ll get back to you as soon as possible.
             </p>
           </div>
           {status === "success" ? (
