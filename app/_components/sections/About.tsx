@@ -12,13 +12,11 @@ export function About() {
         </h2>
         <div className="grid md:grid-cols-[1fr_auto] gap-12 items-start">
           <p className="text-zinc-300 leading-relaxed text-lg max-w-prose">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Previously
-            at Acme Corp and Placeholder Inc, I shipped products used by
-            thousands of people. I care about performance, accessibility, and
-            the small details that make software feel right.
+            I&apos;m a full-stack software developer based in Toronto. I graduated from the University of Toronto majoring in computer science and minoring in math. I care about strong engineering and thoughtful UX — building things that work well and feel intuitive to use.
           </p>
           <a
-            href="#"
+            href="/resume.pdf"
+            download="Connor_Burns_Resume.pdf"
             className="inline-flex items-center gap-2 text-sm font-medium text-zinc-100 border border-zinc-700 rounded-md px-4 py-2.5 hover:border-zinc-500 hover:bg-zinc-900 transition-all whitespace-nowrap"
           >
             <Download size={14} />

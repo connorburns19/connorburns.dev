@@ -23,17 +23,16 @@ export function Freelance() {
     >
       <div className="max-w-4xl mx-auto px-6 py-24">
         <h2 className="text-xs font-semibold tracking-widest uppercase text-zinc-500 mb-10">
-          Available for Freelance
+          Need me to build you a website/app for your business?
         </h2>
         <div className="grid md:grid-cols-2 gap-12 items-start">
           <div>
             <p className="text-zinc-300 leading-relaxed text-lg mb-4">
-              Custom websites for small businesses and startups — fast,
-              accessible, and built to last.
+              Custom websites for small businesses. <br/>
+              Fast, accessible, and built to last.
             </p>
             <p className="text-zinc-500 text-sm leading-relaxed">
-              Placeholder pitch copy. Rates, timeline, and what you can expect
-              from working together go here.
+              Enter your information here and I'll get back to you asap
             </p>
           </div>
           <form
@@ -98,7 +97,7 @@ export function Freelance() {
                 rows={4}
                 value={form.message}
                 onChange={handleChange}
-                placeholder="Tell me about your project..."
+                placeholder="Tell me about your business..."
                 className="w-full bg-zinc-900 border border-zinc-800 rounded-md px-3 py-2 text-sm text-zinc-100 placeholder:text-zinc-600 focus:outline-none focus:border-zinc-500 transition-colors resize-none"
               />
             </div>

@@ -1,14 +1,37 @@
 import Image from "next/image";
 import { ExternalLink } from "lucide-react";
+import { GitHubIcon } from "../BrandIcons";
 
 const PROJECTS = [
   {
     title: "Paw Pirates",
     description:
-      "A two-versus-two party game built in Unity with C#. Awarded third place for accessibility at the 2024 Level Up student games showcase. Contributed game logic for player movement, item interaction, and scoring. Developed custom shaders using Unity Shader Graph.",
+      "Collaborated with a multi-disciplinary team to build a two-versus-two party game in Unity with C#. Awarded third place for accessibility at the 2024 Level Up student games showcase. Contributed game logic for player movement, item interaction, and scoring. Developed custom shaders using Unity Shader Graph.",
     tech: "Unity · C#",
     demoUrl: "https://store.steampowered.com/app/2927380/Paw_Pirates/",
+    demoLabel: "View on Steam",
+    repoUrl: undefined,
     image: "/paw-pirates.png",
+  },
+  {
+    title: "Playbook.js",
+    description:
+      "A JS library that lets developers and users create, save, and view American football play animations. Uses jQuery to drive synced player movements for both predefined and user-inputted plays.",
+    tech: "JavaScript · jQuery",
+    demoUrl: undefined,
+    demoLabel: undefined,
+    repoUrl: "https://github.com/connorburns19/Playbook.js",
+    image: "/playbook-js.png",
+  },
+  {
+    title: "Online Classroom Prototype",
+    description:
+      "Worked in a team to build an interactive high-fidelity Figma prototype for an online learning app. Reached the finalist round of a UX design competition.",
+    tech: "Figma",
+    demoUrl: "https://www.figma.com/proto/oROd76Jdl5AP27pMYJKRYo/funk?node-id=536-6278&scaling=scale-down&page-id=536%3A5983&starting-point-node-id=536%3A6278",
+    demoLabel: "View prototype",
+    repoUrl: undefined,
+    image: "/ux-prototype.png",
   },
 ];
 
@@ -44,15 +67,28 @@ export function Projects() {
                   {project.description}
                 </p>
                 <div className="flex items-center gap-4 text-xs text-zinc-500">
-                  <a
-                    href={project.demoUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-1.5 hover:text-zinc-300 transition-colors"
-                  >
-                    <ExternalLink size={11} />
-                    View on Steam
-                  </a>
+                  {project.demoUrl && (
+                    <a
+                      href={project.demoUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-1.5 hover:text-zinc-300 transition-colors"
+                    >
+                      <ExternalLink size={11} />
+                      {project.demoLabel ?? "Live demo"}
+                    </a>
+                  )}
+                  {project.repoUrl && (
+                    <a
+                      href={project.repoUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-1.5 hover:text-zinc-300 transition-colors"
+                    >
+                      <GitHubIcon size={11} />
+                      Source
+                    </a>
+                  )}
                 </div>
               </div>
             </article>

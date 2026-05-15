@@ -19,9 +19,9 @@ export function Nav() {
           : "border-transparent"
       }`}
     >
-      <nav className="relative z-10 max-w-4xl mx-auto px-6 h-14 flex items-center justify-between">
-        <span className="text-sm font-semibold tracking-tight text-zinc-100">
-          CB
+      <nav className="relative z-10 px-6 h-14 flex items-center justify-center sm:justify-between">
+        <span className="hidden sm:inline text-sm font-semibold tracking-tight text-zinc-100">
+          connorburns.dev
         </span>
         <ul className="flex items-center gap-6 text-sm text-zinc-400">
           <li>
@@ -53,7 +53,7 @@ export function Nav() {
               href="#freelance"
               className="hover:text-zinc-100 transition-colors"
             >
-              Freelance
+              Services
             </a>
           </li>
         </ul>
