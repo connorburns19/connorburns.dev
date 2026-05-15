@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Geist } from "next/font/google";
 import "./globals.css";
-import { SpotlightCanvas } from "./_components/SpotlightCanvas";
+import { DotGrid } from "./_components/DotGrid";
 
 const geist = Geist({
   variable: "--font-geist",
@@ -21,7 +21,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={geist.variable}>
       <body className="bg-zinc-950 text-zinc-100 antialiased font-sans">
-        <SpotlightCanvas />
+        <DotGrid />
         {children}
       </body>
     </html>

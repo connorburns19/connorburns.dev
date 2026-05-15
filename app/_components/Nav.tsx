@@ -13,10 +13,10 @@ export function Nav() {
 
   return (
     <header
-      className={`sticky top-0 z-50 transition-all duration-300 ${
+      className={`sticky top-0 z-50 border-b transition-colors duration-300 ${
         scrolled
-          ? "backdrop-blur-md bg-zinc-950/80 border-b border-zinc-800/60"
-          : ""
+          ? "backdrop-blur-md bg-zinc-950/80 border-zinc-800/60"
+          : "border-transparent"
       }`}
     >
       <nav className="relative z-10 max-w-4xl mx-auto px-6 h-14 flex items-center justify-between">
