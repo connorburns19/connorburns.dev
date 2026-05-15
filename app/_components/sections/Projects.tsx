@@ -1,12 +1,14 @@
+import Image from "next/image";
 import { ExternalLink } from "lucide-react";
 
 const PROJECTS = [
   {
     title: "Paw Pirates",
     description:
-      "A two-versus-two party game built in Unity with C#. Awarded third place for accessibility at the 2024 Level Up student games showcase. Contributed game logic for player movement, item interaction, and scoring, and developed custom shaders using Unity Shader Graph.",
+      "A two-versus-two party game built in Unity with C#. Awarded third place for accessibility at the 2024 Level Up student games showcase. Contributed game logic for player movement, item interaction, and scoring. Developed custom shaders using Unity Shader Graph.",
     tech: "Unity · C#",
     demoUrl: "https://store.steampowered.com/app/2927380/Paw_Pirates/",
+    image: "/paw-pirates.png",
   },
 ];
 
@@ -23,7 +25,16 @@ export function Projects() {
               key={project.title}
               className="border border-zinc-800 rounded-lg overflow-hidden hover:border-zinc-700 transition-colors bg-zinc-950/50"
             >
-              <div className="aspect-video bg-zinc-900" />
+              <div className="aspect-video bg-zinc-900 relative overflow-hidden">
+                {project.image && (
+                  <Image
+                    src={project.image}
+                    alt={project.title}
+                    fill
+                    className="object-cover"
+                  />
+                )}
+              </div>
               <div className="p-5">
                 <h3 className="font-semibold text-zinc-100 mb-1">
                   {project.title}
