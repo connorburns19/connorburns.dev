@@ -7,12 +7,9 @@ const JOBS = [
     bullets: [
       "Developed full-stack features for RSLog, a geotechnical ASP.NET Core borehole logging application",
       "Scoped and developed the RSLog API service used internally and by client development teams",
-      "Implemented unit and integration tests to ensure API reliability and prevent regressions",
-      "Enhanced the gINT/DIGGS project file import functionality through bug fixes and feature additions",
       "Built a JSON export and import service enabling cross-instance project sharing between partnered clients",
       "Redesigned and scoped a UI/UX-focused query builder module for dynamic filtering of RSLog entities",
-      "Performed database migrations and managed schema changes using Entity Framework Core ORM",
-      "Leveraged Azure DevOps to plan user stories, track tasks and bugs, and publish deployments",
+      "Implemented unit and integration tests to ensure API reliability and prevent regressions",
     ],
   },
   {
@@ -22,12 +19,10 @@ const JOBS = [
     period: "May 2022 – May 2023",
     bullets: [
       "Worked full-stack developing the Dayforce .NET HR web software while participating in Agile practices",
-      "Created and updated existing UI widgets for a new feature using TypeScript and the Dojo Toolkit",
+      "Created and updated UI widgets for a new feature using TypeScript and the Dojo Toolkit",
       "Wrote business logic in C# to manage the application status of candidates in the job recruiting module",
-      "Developed SQL scripts to simplify the manual manipulation of back-end employee data",
       "Optimized the running times of existing SQL queries present in the Data Access Layer",
       "Implemented accessibility features compliant with the Web Content Accessibility Guidelines",
-      "Wrote unit tests to ensure new and existing code behaves as required",
     ],
   },
 ];
@@ -59,13 +54,13 @@ export function Experience() {
                   <span className="text-zinc-500 mx-2">·</span>
                   <span className="text-zinc-300">{job.title}</span>
                 </div>
-                <span className="text-sm text-zinc-500 whitespace-nowrap shrink-0">
+                <span className="text-sm text-zinc-400 whitespace-nowrap shrink-0">
                   {job.period}
                 </span>
               </div>
               <ul className="space-y-1.5">
                 {job.bullets.map((bullet) => (
-                  <li key={bullet} className="flex gap-2 text-sm text-zinc-400 leading-relaxed">
+                  <li key={bullet} className="flex gap-2 text-sm text-zinc-300 leading-relaxed">
                     <span className="text-zinc-600 mt-0.5 shrink-0">–</span>
                     {bullet}
                   </li>
