@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { ThemePicker } from "./ThemePicker";
 
 export function Nav() {
   const [scrolled, setScrolled] = useState(false);
@@ -15,48 +16,51 @@ export function Nav() {
     <header
       className={`sticky top-0 z-50 border-b transition-colors duration-300 ${
         scrolled
-          ? "backdrop-blur-md bg-zinc-950/80 border-zinc-800/60"
+          ? "backdrop-blur-md bg-bg/80 border-sub-alt"
           : "border-transparent"
       }`}
     >
       <nav className="relative z-10 px-6 h-14 flex items-center justify-center sm:justify-between">
-        <span className="hidden sm:inline text-sm font-semibold tracking-tight text-zinc-100">
+        <span className="hidden sm:inline text-sm font-semibold tracking-tight text-main">
           connorburns.dev
         </span>
-        <ul className="flex items-center gap-6 text-sm text-zinc-400">
-          <li>
-            <a
-              href="#about"
-              className="hover:text-zinc-100 transition-colors"
-            >
-              About
-            </a>
-          </li>
-          <li>
-            <a
-              href="#experience"
-              className="hover:text-zinc-100 transition-colors"
-            >
-              Experience
-            </a>
-          </li>
-          <li>
-            <a
-              href="#projects"
-              className="hover:text-zinc-100 transition-colors"
-            >
-              Projects
-            </a>
-          </li>
-          <li>
-            <a
-              href="#freelance"
-              className="hover:text-zinc-100 transition-colors"
-            >
-              Freelance
-            </a>
-          </li>
-        </ul>
+        <div className="flex items-center gap-4">
+          <ul className="flex items-center gap-6 text-sm text-main">
+            <li>
+              <a
+                href="#about"
+                className="hover:text-text transition-colors"
+              >
+                About
+              </a>
+            </li>
+            <li>
+              <a
+                href="#experience"
+                className="hover:text-text transition-colors"
+              >
+                Experience
+              </a>
+            </li>
+            <li>
+              <a
+                href="#projects"
+                className="hover:text-text transition-colors"
+              >
+                Projects
+              </a>
+            </li>
+            <li>
+              <a
+                href="#freelance"
+                className="hover:text-text transition-colors"
+              >
+                Freelance
+              </a>
+            </li>
+          </ul>
+          <ThemePicker />
+        </div>
       </nav>
     </header>
   );

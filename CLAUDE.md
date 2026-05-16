@@ -2,7 +2,7 @@
 
 # connorburns.dev — Personal Portfolio
 
-Static personal portfolio that doubles as a freelance pitch. Single-page scroll, dark theme only, no backend except a single contact-form API route.
+Static personal portfolio that doubles as a freelance pitch. Single-page scroll, themed via a Monkeytype-style picker, no backend except a single contact-form API route.
 
 ## Stack
 
@@ -27,7 +27,6 @@ Everything else — typography-led layout, generous whitespace, motion only when
 
 ## Hard rules
 
-- Dark theme only. No light/dark toggle.
 - One signature visual effect. Don't stack parallax, animated gradients, particles, or scroll-jacking on top of the cursor spotlight.
 - Motion serves the user. No looping decorative animations.
 - The spotlight must disable gracefully on touch devices (`@media (hover: hover)` or equivalent).
@@ -47,6 +46,10 @@ Sticky top nav with smooth-scroll anchor links: About · Projects · Freelance.
 
 No multi-page routing yet. When individual projects deserve deep case-studies, add `/projects/[slug]` then — not before.
 
+## Theming
+
+Visitors can switch palettes via a Monkeytype-style theme picker in the nav (desktop only). Themes flow through CSS variables in `:root` defined in `app/globals.css` and mapped to Tailwind utilities (`bg-bg`, `text-text`, `text-sub`, `border-sub-alt`, `bg-main`, `text-error`, etc.) via `@theme inline`. Default preset is `midnight` (current dark look). See `app/_lib/themes.ts` for the preset registry and how to add a new one.
+
 ## What not to add
 
 - No database, CMS, or auth.
@@ -54,7 +57,6 @@ No multi-page routing yet. When individual projects deserve deep case-studies, a
 - No full component libraries — Chakra, MUI, Mantine, etc. shadcn/ui only.
 - No additional pages without a specific reason. Stay single-page.
 - No analytics scripts unless I explicitly ask.
-- No light theme, no theme toggle.
 
 ## Contact form
 
