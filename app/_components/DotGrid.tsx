@@ -1,12 +1,14 @@
 "use client";
 
 import { useEffect, useRef } from "react";
+import { THEME_CHANGED_EVENT } from "../_lib/theme";
 
 const GRID = 28;
 const DOT_R = 1;
 const LERP = 0.12;
 const PULL_RADIUS = 80;
 const MAX_PULL = 8;
+const DOT_ALPHA = 0.18;
 
 export function DotGrid() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -22,7 +24,23 @@ export function DotGrid() {
     canvas.width = W;
     canvas.height = H;
 
-    // Start off-screen until mouse enters
+    let bgColor = "#09090b";
+    let dotColor = "#a1a1aa";
+
+    const refreshColors = () => {
+      const cs = getComputedStyle(document.documentElement);
+      const bg = cs.getPropertyValue("--bg-color").trim();
+      const dot = cs.getPropertyValue("--dot-color").trim();
+      if (bg) bgColor = bg;
+      if (dot) dotColor = dot;
+    };
+
+    refreshColors();
+    const onThemeChange = () => {
+      requestAnimationFrame(refreshColors);
+    };
+    window.addEventListener(THEME_CHANGED_EVENT, onThemeChange);
+
     let curX = -9999;
     let curY = -9999;
     let targetX = -9999;
@@ -33,11 +51,12 @@ export function DotGrid() {
       curX += (targetX - curX) * LERP;
       curY += (targetY - curY) * LERP;
 
-      ctx.fillStyle = "#09090b";
+      ctx.fillStyle = bgColor;
       ctx.fillRect(0, 0, W, H);
 
       ctx.globalCompositeOperation = "source-over";
-      ctx.fillStyle = "rgba(255,255,255,0.07)";
+      ctx.globalAlpha = DOT_ALPHA;
+      ctx.fillStyle = dotColor;
 
       const cols = Math.ceil(W / GRID);
       const rows = Math.ceil(H / GRID);
@@ -63,6 +82,8 @@ export function DotGrid() {
           ctx.fill();
         }
       }
+
+      ctx.globalAlpha = 1;
 
       rafId = requestAnimationFrame(frame);
     };
@@ -94,6 +115,7 @@ export function DotGrid() {
       window.removeEventListener("mousemove", onMouseMove);
       document.removeEventListener("mouseleave", onMouseLeave);
       window.removeEventListener("resize", onResize);
+      window.removeEventListener(THEME_CHANGED_EVENT, onThemeChange);
     };
   }, []);
 

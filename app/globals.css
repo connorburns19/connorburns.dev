@@ -1,11 +1,57 @@
 @import "tailwindcss";
 
+:root {
+  --bg-color: #09090b;
+  --main-color: #fafafa;
+  --caret-color: #fafafa;
+  --sub-color: #a1a1aa;
+  --sub-alt-color: #18181b;
+  --text-color: #fafafa;
+  --error-color: #f87171;
+  --error-extra-color: #ef4444;
+  --colorful-error-color: #f87171;
+  --colorful-error-extra-color: #ef4444;
+  /* Interpolated shades — overridden explicitly in midnight.css,
+     computed via color-mix() for every other preset automatically. */
+  --text-dim-color: color-mix(in srgb, var(--text-color) 60%, var(--sub-color));
+  --sub-dim-color: color-mix(in srgb, var(--sub-color) 50%, var(--bg-color));
+  --sub-faint-color: color-mix(in srgb, var(--sub-color) 25%, var(--bg-color));
+  --label-color: var(--main-color);
+  --dot-color: var(--text-color);
+}
+
 @theme inline {
   --font-sans: var(--font-geist), ui-sans-serif, system-ui, sans-serif;
+  --color-bg: var(--bg-color);
+  --color-main: var(--main-color);
+  --color-caret: var(--caret-color);
+  --color-sub: var(--sub-color);
+  --color-sub-alt: var(--sub-alt-color);
+  --color-text: var(--text-color);
+  --color-text-dim: var(--text-dim-color);
+  --color-sub-dim: var(--sub-dim-color);
+  --color-sub-faint: var(--sub-faint-color);
+  --color-error: var(--error-color);
+  --color-error-extra: var(--error-extra-color);
+  --color-colorful-error: var(--colorful-error-color);
+  --color-colorful-error-extra: var(--colorful-error-extra-color);
+}
+
+.text-label {
+  color: var(--label-color);
 }
 
 html {
   scroll-behavior: smooth;
-  background-color: #09090b;
-  color: #fafafa;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
 }

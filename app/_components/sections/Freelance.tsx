@@ -46,23 +46,23 @@ export function Freelance() {
       className="relative z-10"
     >
       <div className="max-w-4xl mx-auto px-6 py-24">
-        <h2 className="text-xs font-semibold tracking-widest uppercase text-zinc-500 mb-10">
+        <h2 className="text-xs font-semibold tracking-widest uppercase text-label mb-10">
           Freelance
         </h2>
         <div className="grid md:grid-cols-2 gap-12 items-start">
           <div>
-            <h3 className="text-2xl sm:text-3xl font-semibold tracking-tight text-zinc-100 mb-4 leading-tight">
+            <h3 className="text-2xl sm:text-3xl font-semibold tracking-tight text-text mb-4 leading-tight">
               Need a website for your business?
             </h3>
-            <p className="text-zinc-300 leading-relaxed mb-3">
+            <p className="text-text-dim leading-relaxed mb-3">
               Custom websites for small businesses. Fast, accessible, and built to last.
             </p>
-            <p className="text-zinc-400 text-sm leading-relaxed">
+            <p className="text-text-dim text-sm leading-relaxed">
               Send me a message and I&apos;ll get back to you as soon as possible.
             </p>
           </div>
           {status === "success" ? (
-            <p className="text-zinc-300 text-sm leading-relaxed">
+            <p className="text-text text-sm leading-relaxed">
               Message sent! I&apos;ll be in touch soon.
             </p>
           ) : (
@@ -81,7 +81,7 @@ export function Freelance() {
               <div>
                 <label
                   htmlFor="name"
-                  className="block text-xs text-zinc-500 mb-1.5"
+                  className="block text-xs text-text-dim mb-1.5"
                 >
                   Name
                 </label>
@@ -92,13 +92,13 @@ export function Freelance() {
                   value={form.name}
                   onChange={handleChange}
                   placeholder="Your name"
-                  className="w-full bg-zinc-900 border border-zinc-800 rounded-md px-3 py-2 text-sm text-zinc-100 placeholder:text-zinc-600 focus:outline-none focus:border-zinc-500 transition-colors"
+                  className="w-full bg-sub-alt border border-sub-alt rounded-md px-3 py-2 text-sm text-text placeholder:text-text-dim focus:outline-none focus:border-sub-dim transition-colors"
                 />
               </div>
               <div>
                 <label
                   htmlFor="email"
-                  className="block text-xs text-zinc-500 mb-1.5"
+                  className="block text-xs text-text-dim mb-1.5"
                 >
                   Email
                 </label>
@@ -109,13 +109,13 @@ export function Freelance() {
                   value={form.email}
                   onChange={handleChange}
                   placeholder="you@example.com"
-                  className="w-full bg-zinc-900 border border-zinc-800 rounded-md px-3 py-2 text-sm text-zinc-100 placeholder:text-zinc-600 focus:outline-none focus:border-zinc-500 transition-colors"
+                  className="w-full bg-sub-alt border border-sub-alt rounded-md px-3 py-2 text-sm text-text placeholder:text-text-dim focus:outline-none focus:border-sub-dim transition-colors"
                 />
               </div>
               <div>
                 <label
                   htmlFor="message"
-                  className="block text-xs text-zinc-500 mb-1.5"
+                  className="block text-xs text-text-dim mb-1.5"
                 >
                   Message
                 </label>
@@ -126,16 +126,16 @@ export function Freelance() {
                   value={form.message}
                   onChange={handleChange}
                   placeholder="Tell me about your business..."
-                  className="w-full bg-zinc-900 border border-zinc-800 rounded-md px-3 py-2 text-sm text-zinc-100 placeholder:text-zinc-600 focus:outline-none focus:border-zinc-500 transition-colors resize-none"
+                  className="w-full bg-sub-alt border border-sub-alt rounded-md px-3 py-2 text-sm text-text placeholder:text-text-dim focus:outline-none focus:border-sub-dim transition-colors resize-none"
                 />
               </div>
               {status === "error" && (
-                <p className="text-red-400 text-sm">{errorMsg}</p>
+                <p className="text-error text-sm">{errorMsg}</p>
               )}
               <button
                 type="submit"
                 disabled={status === "loading"}
-                className="self-start text-sm font-medium text-zinc-900 bg-zinc-100 px-5 py-2.5 rounded-md hover:bg-white transition-colors cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed"
+                className="self-start text-sm font-medium text-bg bg-main px-5 py-2.5 rounded-md hover:opacity-90 transition-opacity cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 {status === "loading" ? "Sending…" : "Send message"}
               </button>

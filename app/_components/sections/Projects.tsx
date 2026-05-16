@@ -39,16 +39,16 @@ export function Projects() {
   return (
     <section id="projects" className="relative z-10">
       <div className="max-w-4xl mx-auto px-6 py-24">
-        <h2 className="text-xs font-semibold tracking-widest uppercase text-zinc-500 mb-10">
+        <h2 className="text-xs font-semibold tracking-widest uppercase text-label mb-10">
           Projects
         </h2>
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
           {PROJECTS.map((project) => (
             <article
               key={project.title}
-              className="border border-zinc-800 rounded-lg overflow-hidden hover:border-zinc-700 transition-colors bg-zinc-950/50"
+              className="border border-sub-alt rounded-lg overflow-hidden hover:border-sub transition-colors bg-bg/50"
             >
-              <div className="aspect-video bg-zinc-900 relative overflow-hidden">
+              <div className="aspect-video bg-sub-alt relative overflow-hidden">
                 {project.image && (
                   <Image
                     src={project.image}
@@ -59,20 +59,20 @@ export function Projects() {
                 )}
               </div>
               <div className="p-5">
-                <h3 className="font-semibold text-zinc-100 mb-1">
+                <h3 className="font-semibold text-text mb-1">
                   {project.title}
                 </h3>
-                <p className="text-xs text-zinc-600 mb-3">{project.tech}</p>
-                <p className="text-sm text-zinc-300 leading-relaxed mb-4">
+                <p className="text-xs text-text-dim mb-3">{project.tech}</p>
+                <p className="text-sm text-text-dim leading-relaxed mb-4">
                   {project.description}
                 </p>
-                <div className="flex items-center gap-4 text-xs text-zinc-400">
+                <div className="flex items-center gap-4 text-xs text-text-dim">
                   {project.demoUrl && (
                     <a
                       href={project.demoUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center gap-1.5 hover:text-zinc-300 transition-colors"
+                      className="flex items-center gap-1.5 hover:text-text transition-colors"
                     >
                       <ExternalLink size={11} />
                       {project.demoLabel ?? "Live demo"}
@@ -83,7 +83,7 @@ export function Projects() {
                       href={project.repoUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center gap-1.5 hover:text-zinc-300 transition-colors"
+                      className="flex items-center gap-1.5 hover:text-text transition-colors"
                     >
                       <GitHubIcon size={11} />
                       Source
