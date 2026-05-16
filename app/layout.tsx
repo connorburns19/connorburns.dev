@@ -25,11 +25,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={geist.variable} suppressHydrationWarning>
-      <body className="bg-bg text-text antialiased font-sans">
+      <head>
         <script
           dangerouslySetInnerHTML={{ __html: BOOT_SCRIPT }}
           suppressHydrationWarning
         />
+      </head>
+      <body className="bg-bg text-text antialiased font-sans">
         <DotGrid />
         {children}
       </body>

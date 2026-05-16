@@ -47,6 +47,16 @@ html {
   color: var(--text-color);
 }
 
+body {
+  background-image: radial-gradient(
+    circle,
+    color-mix(in srgb, var(--dot-color) 18%, transparent) 1px,
+    transparent 1px
+  );
+  background-size: 28px 28px;
+  background-position: -14px -14px;
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
