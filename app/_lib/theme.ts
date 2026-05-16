@@ -29,9 +29,5 @@ try{
 var s=localStorage.getItem("${STORAGE_KEY}");
 if(s&&/^[a-z0-9_]+$/i.test(s))p=s;
 }catch(e){}
-var l=document.createElement("link");
-l.id="currentTheme";
-l.rel="stylesheet";
-l.href="/themes/"+p+".css";
-document.head.appendChild(l);
+document.write('<link id="currentTheme" rel="stylesheet" href="/themes/'+p+'.css">');
 })();`;
