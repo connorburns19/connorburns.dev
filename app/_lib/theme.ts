@@ -3,9 +3,14 @@ export const THEME_CHANGED_EVENT = "theme-changed";
 export const DEFAULT_PRESET = "midnight";
 
 export function applyPreset(slug: string): void {
-  const link = document.getElementById("currentTheme") as HTMLLinkElement | null;
-  if (!link) return;
-  link.setAttribute("href", `/themes/${slug}.css`);
+  const oldLink = document.getElementById(
+    "currentTheme"
+  ) as HTMLLinkElement | null;
+  const newLink = document.createElement("link");
+  newLink.id = "currentTheme";
+  newLink.rel = "stylesheet";
+  newLink.href = `/themes/${slug}.css`;
+
   const sync = () => {
     const bg = getComputedStyle(document.documentElement)
       .getPropertyValue("--bg-color")
@@ -16,10 +21,23 @@ export function applyPreset(slug: string): void {
     if (meta && bg) meta.setAttribute("content", bg);
     window.dispatchEvent(new Event(THEME_CHANGED_EVENT));
   };
-  if (link.sheet) {
-    requestAnimationFrame(sync);
+
+  const finalize = () => {
+    if (oldLink && oldLink !== newLink) oldLink.remove();
+    sync();
+  };
+
+  newLink.addEventListener("load", finalize, { once: true });
+  // Fallback in case load doesn't fire (cached stylesheet on some engines)
+  newLink.addEventListener("error", finalize, { once: true });
+
+  if (oldLink && oldLink.parentNode) {
+    // Insert new link immediately after old to keep cascade order, then
+    // remove the old one once the new sheet has applied — prevents FOUC.
+    oldLink.id = "";
+    oldLink.parentNode.insertBefore(newLink, oldLink.nextSibling);
   } else {
-    link.addEventListener("load", sync, { once: true });
+    document.head.appendChild(newLink);
   }
 }
 
