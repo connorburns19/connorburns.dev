@@ -47,7 +47,7 @@ export function Freelance() {
     >
       <div className="max-w-4xl mx-auto px-6 py-24">
         <h2 className="text-xs font-semibold tracking-widest uppercase text-label mb-10">
-          Freelance
+          Hire Me
         </h2>
         <div className="grid md:grid-cols-2 gap-12 items-start">
           <div>

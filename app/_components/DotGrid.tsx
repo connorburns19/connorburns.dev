@@ -36,6 +36,12 @@ export function DotGrid() {
     };
 
     refreshColors();
+    const themeLink = document.getElementById(
+      "currentTheme"
+    ) as HTMLLinkElement | null;
+    if (themeLink && !themeLink.sheet) {
+      themeLink.addEventListener("load", refreshColors, { once: true });
+    }
     const onThemeChange = () => {
       requestAnimationFrame(refreshColors);
     };
