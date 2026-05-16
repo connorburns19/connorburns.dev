@@ -55,7 +55,7 @@ export function Nav() {
                 href="#freelance"
                 className="hover:text-text transition-colors"
               >
-                Freelance
+                Hire Me
               </a>
             </li>
           </ul>
