@@ -4,9 +4,19 @@ import { GitHubIcon } from "../BrandIcons";
 
 const PROJECTS = [
   {
+    title: "Playbook.ts",
+    description:
+      "TypeScript library for creating, saving, and animating American Football play diagrams. Built on the Web Animations API with no runtime dependencies, shipping at ~5 KB gzipped. Includes a live, interactive demo.",
+    tech: "TypeScript · Web Animations API",
+    demoUrl: "/projects/playbook",
+    demoLabel: "Live demo",
+    repoUrl: "https://github.com/connorburns19/Playbook.ts",
+    image: "/playbook-js.png",
+  },
+  {
     title: "Paw Pirates",
     description:
-      "Collaborated with a multi-disciplinary team to build a two-versus-two party game in Unity with C#. Awarded third place for accessibility at the 2024 Level Up student games showcase. Contributed game logic for player movement, item interaction, and scoring. Developed custom shaders using Unity Shader Graph.",
+      "Party game built in Unity with C#. Made with a multi-disciplinary team and awarded third place for accessibility at the 2024 Level Up student games showcase. Built game logic and custom shaders in Unity Shader Graph.",
     tech: "Unity · C#",
     demoUrl: "https://store.steampowered.com/app/2927380/Paw_Pirates/",
     demoLabel: "View on Steam",
@@ -14,19 +24,9 @@ const PROJECTS = [
     image: "/paw-pirates.png",
   },
   {
-    title: "Playbook",
-    description:
-      "A typed, dependency-free rewrite of a 2021 jQuery school project. A TypeScript library for creating, saving, and animating American Football play diagrams, driven by the Web Animations API and shipping at ~5 KB gzipped. Includes a live, interactive demo.",
-    tech: "TypeScript · Web Animations API",
-    demoUrl: "/projects/playbook",
-    demoLabel: "Live demo",
-    repoUrl: "https://github.com/connorburns19/Playbook.js-V2",
-    image: "/playbook-js.png",
-  },
-  {
     title: "Online Classroom Prototype",
     description:
-      "Worked in a team to build an interactive high-fidelity Figma prototype for an online learning app. Reached the finalist round of a UX design competition.",
+      "High-fidelity, interactive Figma prototype for an online learning app. Designed on a team to make remote lessons feel structured and interactive rather than a wall of video. Reached the finalist round of a UX design competition.",
     tech: "Figma",
     demoUrl: "https://www.figma.com/proto/oROd76Jdl5AP27pMYJKRYo/funk?node-id=536-6278&scaling=scale-down&page-id=536%3A5983&starting-point-node-id=536%3A6278",
     demoLabel: "View prototype",
@@ -46,7 +46,7 @@ export function Projects() {
           {PROJECTS.map((project) => (
             <article
               key={project.title}
-              className="border border-sub-alt rounded-lg overflow-hidden hover:border-sub transition-colors bg-bg/50"
+              className="flex flex-col border border-sub-alt rounded-lg overflow-hidden hover:border-sub transition-colors bg-bg/50"
             >
               <div className="aspect-video bg-sub-alt relative overflow-hidden">
                 {project.image && (
@@ -58,15 +58,15 @@ export function Projects() {
                   />
                 )}
               </div>
-              <div className="p-5">
+              <div className="flex flex-1 flex-col p-5">
                 <h3 className="font-semibold text-text mb-1">
                   {project.title}
                 </h3>
                 <p className="text-xs text-text-dim mb-3">{project.tech}</p>
-                <p className="text-sm text-text-dim leading-relaxed mb-4">
+                <p className="text-sm text-text-dim leading-relaxed mb-8">
                   {project.description}
                 </p>
-                <div className="flex items-center gap-4 text-xs text-text-dim">
+                <div className="mt-auto flex items-center gap-4 text-xs text-text-dim">
                   {project.demoUrl && (
                     <a
                       href={project.demoUrl}

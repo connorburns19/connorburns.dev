@@ -3,7 +3,7 @@
 /**
  * Playbook interactive demo — connorburns.dev/projects/playbook.
  *
- * Ported from the V2 prototype (demo/portfolio/ in the Playbook.js-V2 repo).
+ * Ported from the V2 prototype (demo/portfolio/ in the Playbook.ts repo).
  * The library mounts imperatively by element id, so this is a client
  * component: every widget is created in a useEffect and torn down in its
  * cleanup. That cleanup is load-bearing — React StrictMode runs effects
@@ -238,7 +238,7 @@ export default function PlaybookDemoPage() {
     <div data-pb-theme="dark" className="portfolio-page">
       <main className="portfolio-shell">
         <header className="portfolio-header">
-          <h1 className="portfolio-title">Playbook</h1>
+          <h1 className="portfolio-title">Playbook.ts</h1>
           <p className="portfolio-tagline">
             A tiny TypeScript library for creating, saving, and animating American Football
             play diagrams. Built on the Web Animations API with no runtime dependencies.
@@ -359,7 +359,7 @@ export default function PlaybookDemoPage() {
           <ul className="portfolio-footer__links">
             <li>
               <a
-                href="https://github.com/connorburns19/Playbook.js-V2"
+                href="https://github.com/connorburns19/Playbook.ts"
                 target="_blank"
                 rel="noopener"
               >
@@ -368,7 +368,7 @@ export default function PlaybookDemoPage() {
             </li>
             <li>
               <a
-                href="https://github.com/connorburns19/Playbook.js-V2/blob/main/PLAN.md"
+                href="https://github.com/connorburns19/Playbook.ts/blob/main/PLAN.md"
                 target="_blank"
                 rel="noopener"
               >

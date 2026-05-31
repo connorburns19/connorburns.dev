@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Playbook — interactive demo",
+  title: "Playbook.ts — interactive demo",
   description:
-    "Playbook — a tiny TypeScript library for creating, saving, and animating American Football play diagrams. Live interactive demo.",
+    "Playbook.ts — a tiny TypeScript library for creating, saving, and animating American Football play diagrams. Live interactive demo.",
 };
 
 export default function PlaybookLayout({
