@@ -4,7 +4,7 @@ import { useState } from "react";
 
 type Status = "idle" | "loading" | "success" | "error";
 
-export function Freelance() {
+export function Contact() {
   const [form, setForm] = useState({
     name: "",
     email: "",
@@ -42,23 +42,22 @@ export function Freelance() {
 
   return (
     <section
-      id="freelance"
+      id="contact"
       className="relative z-10"
     >
       <div className="max-w-4xl mx-auto px-6 py-24">
         <h2 className="text-xs font-semibold tracking-widest uppercase text-label mb-10">
-          Hire Me
+          Contact Me
         </h2>
         <div className="grid md:grid-cols-2 gap-12 items-start">
           <div>
             <h3 className="text-2xl sm:text-3xl font-semibold tracking-tight text-text mb-4 leading-tight">
-              Need a website for your business?
+              Let&apos;s work together.
             </h3>
             <p className="text-text-dim leading-relaxed mb-3">
-              Custom websites for small businesses. Fast, accessible, and built to last.
-            </p>
-            <p className="text-text-dim text-sm leading-relaxed">
-              Send me a message and I&apos;ll get back to you as soon as possible.
+              Open to freelance projects, full-time roles, and anything in between.
+              Whether you&apos;ve got something in mind or just want to say hi, drop me a
+              line.
             </p>
           </div>
           {status === "success" ? (
