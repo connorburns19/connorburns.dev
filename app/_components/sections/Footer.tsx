@@ -7,6 +7,9 @@ export function Footer() {
       <div className="max-w-4xl mx-auto px-6 py-10 flex items-center justify-between text-sm text-text-dim">
         <div className="flex flex-col gap-0.5">
           <span className="text-sm font-semibold tracking-tight text-main">connorburns.dev</span>
+          <span className="text-xs text-text-dim">
+            © {new Date().getFullYear()} Connor Burns
+          </span>
         </div>
         <div className="flex items-center gap-5">
           <a
