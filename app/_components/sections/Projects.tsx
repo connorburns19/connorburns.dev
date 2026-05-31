@@ -14,13 +14,13 @@ const PROJECTS = [
     image: "/paw-pirates.png",
   },
   {
-    title: "Playbook.js",
+    title: "Playbook",
     description:
-      "A JS library that lets developers and users create, save, and view American football play animations. Uses jQuery to drive synced player movements for both predefined and user-inputted plays.",
-    tech: "JavaScript · jQuery",
-    demoUrl: undefined,
-    demoLabel: undefined,
-    repoUrl: "https://github.com/connorburns19/Playbook.js",
+      "A typed, dependency-free rewrite of a 2021 jQuery school project. A TypeScript library for creating, saving, and animating American Football play diagrams, driven by the Web Animations API and shipping at ~5 KB gzipped. Includes a live, interactive demo.",
+    tech: "TypeScript · Web Animations API",
+    demoUrl: "/projects/playbook",
+    demoLabel: "Live demo",
+    repoUrl: "https://github.com/connorburns19/Playbook.js-V2",
     image: "/playbook-js.png",
   },
   {
