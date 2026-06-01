@@ -124,7 +124,7 @@ export function Contact() {
                   rows={4}
                   value={form.message}
                   onChange={handleChange}
-                  placeholder="Tell me about your business..."
+                  placeholder="What's on your mind..."
                   className="w-full bg-sub-alt border border-sub-alt rounded-md px-3 py-2 text-sm text-text placeholder:text-text-dim focus:outline-none focus:border-sub-dim transition-colors resize-none"
                 />
               </div>
