@@ -14,6 +14,8 @@ export function Footer() {
         <div className="flex items-center gap-5">
           <a
             href="https://github.com/connorburns19"
+            target="_blank"
+            rel="noopener noreferrer"
             aria-label="GitHub"
             className="hover:text-text transition-colors"
           >
@@ -21,6 +23,8 @@ export function Footer() {
           </a>
           <a
             href="https://www.linkedin.com/in/connor-burns19/"
+            target="_blank"
+            rel="noopener noreferrer"
             aria-label="LinkedIn"
             className="hover:text-text transition-colors"
           >
