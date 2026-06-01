@@ -13,6 +13,8 @@ export function Hero() {
       <div className="flex flex-wrap items-center gap-6 text-text-dim mb-8">
         <a
           href="https://github.com/connorburns19"
+          target="_blank"
+          rel="noopener noreferrer"
           className="flex items-center gap-2 hover:text-text transition-colors text-sm"
         >
           <GitHubIcon size={15} />
@@ -20,6 +22,8 @@ export function Hero() {
         </a>
         <a
           href="https://www.linkedin.com/in/connor-burns19/"
+          target="_blank"
+          rel="noopener noreferrer"
           className="flex items-center gap-2 hover:text-text transition-colors text-sm"
         >
           <LinkedInIcon size={15} />
