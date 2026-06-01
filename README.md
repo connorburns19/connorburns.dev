@@ -1,4 +1,4 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+My personal site and portfolio — [connorburns.dev](https://connorburns.dev). Built with Next.js (App Router), React, and Tailwind CSS, deployed on Vercel. Includes a live interactive demo of [Playbook](https://connorburns.dev/projects/playbook) at `/projects/playbook`.
 
 ## Getting Started
 

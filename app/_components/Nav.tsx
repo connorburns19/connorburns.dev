@@ -52,10 +52,10 @@ export function Nav() {
             </li>
             <li>
               <a
-                href="#freelance"
+                href="#contact"
                 className="hover:text-text transition-colors"
               >
-                Hire Me
+                Contact Me
               </a>
             </li>
           </ul>
