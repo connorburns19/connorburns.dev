@@ -9,7 +9,7 @@
     "lint": "eslint"
   },
   "dependencies": {
-    "@connorburns/playbook": "file:./vendor/connorburns-playbook-0.1.0.tgz",
+    "@connorburns/playbook": "file:vendor/connorburns-playbook-0.1.0.tgz",
     "highlight.js": "^11.11.1",
     "lucide-react": "^1.16.0",
     "motion": "^12.38.0",
