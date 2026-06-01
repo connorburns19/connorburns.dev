@@ -190,6 +190,10 @@
   min-width: 0;
 }
 
+.portfolio-snippet__demo .pages-container {
+  --pb-book-max-width: 500px;
+}
+
 
 /* ---------- Footer ---------- */
 
