@@ -37,11 +37,13 @@ export function PlaybookClient() {
     /* ---- Snippet 1: bare field ---- */
     const demoField = PlayDisplayer.hydrate(firstChild(SLOT_IDS.demoField), {
       size: "large",
+      name: "Bare field",
     });
 
     /* ---- Snippet 2: field with preset moves ---- */
     const demoSetmove = PlayDisplayer.hydrate(firstChild(SLOT_IDS.demoSetmove), {
       size: "large",
+      name: "Preset play",
     });
     demoSetmove.setMove("lte", "straight-deep");
     demoSetmove.setMove("rte", "mid-90-right");
@@ -51,6 +53,7 @@ export function PlaybookClient() {
     /* ---- Snippet 3: field + sandbox ---- */
     const demoSandboxField = PlayDisplayer.hydrate(firstChild(SLOT_IDS.demoSbField), {
       size: "large",
+      name: "Sandbox field",
     });
     const sbControlsEl = firstChild(SLOT_IDS.demoSbControls);
     demoSandboxField.spawnSandbox(false, null, null, "demo-sb", sbControlsEl);
@@ -58,6 +61,7 @@ export function PlaybookClient() {
     /* ---- Snippet 4: book + field ---- */
     const demoBfField = PlayDisplayer.hydrate(firstChild(SLOT_IDS.demoBfField), {
       size: "large",
+      name: "Book and field",
     });
     const demoBfBook = Playbook.hydrate(firstChild(SLOT_IDS.demoBfBook), {
       title: "Playbook",

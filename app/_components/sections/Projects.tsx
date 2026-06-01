@@ -11,7 +11,7 @@ const PROJECTS = [
     demoUrl: "/projects/playbook",
     demoLabel: "Live demo",
     repoUrl: "https://github.com/connorburns19/Playbook.ts",
-    image: "/playbook-js.png",
+    image: "/images/playbookts.png",
   },
   {
     title: "Paw Pirates",
@@ -54,6 +54,7 @@ export function Projects() {
                     src={project.image}
                     alt={project.title}
                     fill
+                    sizes="(min-width:1024px) 33vw, (min-width:640px) 50vw, 100vw"
                     className="object-cover"
                   />
                 )}

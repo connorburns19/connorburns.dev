@@ -92,27 +92,30 @@ field.spawnSandbox(true, layout.sandboxSlot, book.createSaveButton());`);
 // ---------------------------------------------------------------------------
 
 function buildConnectedHTML(suffix: string): string {
-  const layout = renderConnectedLayoutHTML({ idSuffix: suffix });
-  const fieldHTML = renderPlayDisplayerHTML({ size: "large", name: "Example" });
-  const sandboxHTML = renderSandboxHTML({ size: "large", idPrefix: suffix, allowSave: true });
-  const bookHTML = renderPlaybookHTML({
-    title: "Example",
-    pageOrientation: "vertical",
-    pages: DEMO_PAGES,
-  });
-  return layout.html
-    .replace(`id="${layout.fieldSlot}"></div>`, `id="${layout.fieldSlot}">${fieldHTML}</div>`)
-    .replace(`id="${layout.sandboxSlot}"></div>`, `id="${layout.sandboxSlot}">${sandboxHTML}</div>`)
-    .replace(`id="${layout.bookSlot}"></div>`, `id="${layout.bookSlot}">${bookHTML}</div>`);
+  // The renderer nests the widget HTML into each slot directly — no fragile
+  // string-splicing of the layout scaffold.
+  return renderConnectedLayoutHTML({
+    idSuffix: suffix,
+    fieldHTML: renderPlayDisplayerHTML({ size: "large", name: "Example" }),
+    sandboxHTML: renderSandboxHTML({ size: "large", idPrefix: suffix, allowSave: true }),
+    bookHTML: renderPlaybookHTML({
+      title: "Example",
+      pageOrientation: "vertical",
+      pages: DEMO_PAGES,
+    }),
+  }).html;
 }
 
 const heroHTML = buildConnectedHTML(SLOT_IDS.heroSuffix);
 const cloneHTML = buildConnectedHTML(SLOT_IDS.cloneSuffix);
-const demoFieldHTML = renderPlayDisplayerHTML({ size: "large" });
-const demoSetmoveHTML = renderPlayDisplayerHTML({ size: "large" });
-const demoSbFieldHTML = renderPlayDisplayerHTML({ size: "large" });
+// Distinct names so each demo field is a uniquely-labelled landmark region
+// for screen readers. Names must match the PlayDisplayer.hydrate calls in
+// PlaybookClient.tsx so the server markup and client adoption stay in parity.
+const demoFieldHTML = renderPlayDisplayerHTML({ size: "large", name: "Bare field" });
+const demoSetmoveHTML = renderPlayDisplayerHTML({ size: "large", name: "Preset play" });
+const demoSbFieldHTML = renderPlayDisplayerHTML({ size: "large", name: "Sandbox field" });
 const demoSbControlsHTML = renderSandboxHTML({ size: "large", idPrefix: "demo-sb", allowSave: false });
-const demoBfFieldHTML = renderPlayDisplayerHTML({ size: "large" });
+const demoBfFieldHTML = renderPlayDisplayerHTML({ size: "large", name: "Book and field" });
 const demoBfBookHTML = renderPlaybookHTML({
   title: "Playbook",
   pageOrientation: "vertical",
