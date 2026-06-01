@@ -15,23 +15,25 @@ export const SLOT_IDS = {
   cloneSuffix: "clone",
 } as const;
 
-// Positions order: lte lt lg c rg rt rte qb lhb fb rhb
+// Moves use the partial { position: move } map form — unlisted positions
+// default to 'none'. (The library also accepts an 11-entry positional array.)
 export const DEMO_PAGES: PageData[] = [
   {
     image: "/images/hailmaryout.png",
     title: "Hail Mary Out",
     videoLink: "https://youtu.be/qyqCTMirNWg?t=289",
-    moves: [
-      "straight-deep", "mid-90-left", "none", "none", "none",
-      "mid-90-right", "straight-deep", "pass-qb", "none", "hole-four-fb", "none",
-    ],
+    moves: {
+      lte: "straight-deep", lt: "mid-90-left",
+      rt: "mid-90-right", rte: "straight-deep",
+      qb: "pass-qb", fb: "hole-four-fb",
+    },
   },
   {
     image: "/images/lbhandoff.png",
     title: "Left Handoff FB",
-    moves: [
-      "none", "none", "none", "none", "none", "none", "none",
-      "hand-off-left-qb", "hole-one-lhb", "hole-two-fb", "hole-five-rhb",
-    ],
+    moves: {
+      qb: "hand-off-left-qb", lhb: "hole-one-lhb",
+      fb: "hole-two-fb", rhb: "hole-five-rhb",
+    },
   },
 ];
