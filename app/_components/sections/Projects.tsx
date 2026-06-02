@@ -6,7 +6,7 @@ const PROJECTS = [
   {
     title: "Playbook.ts",
     description:
-      "TypeScript library for creating, saving, and animating American Football play diagrams. Built on the Web Animations API with no runtime dependencies, shipping at ~5 KB gzipped. Includes a live, interactive demo.",
+      "TypeScript library for creating, saving, and animating American Football play diagrams. Built on the Web Animations API with no runtime dependencies, shipping at ~8 KB gzipped. Includes a live, interactive demo.",
     tech: "TypeScript · Web Animations API",
     demoUrl: "/projects/playbook",
     demoLabel: "Live demo",
